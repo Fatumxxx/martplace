@@ -1,11 +1,118 @@
-html{
-    box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+// start header
+.header__top{
+    background-color: $bg;
 }
-*,
-*::before,
-*::after{
-    box-sizing:inherit;
-}
-.box{
+.header__top-inner{
     display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
 }
+.header__logo{
+    font-family: "Quicksand-Bold";
+    font-size: 30px;
+    a{
+        color: #000;
+    }
+    span{
+        color: $blue;
+    }
+}
+.header__box{
+    display: flex;
+    justify-content: space-between;
+    .header__btn{
+        padding: 7px 28px;
+        background-color: $blue;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 28px;
+        margin-right: 218px;
+        border-radius: 50px;
+    }
+}
+.header__box-user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        .avatar{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin-right: 20px;
+        }
+}
+.user__info{
+    line-height: 22px;
+    &-name{
+        font-family: "Quicksand-Medium";
+        font-weight: 500;
+        font-size: 16px;
+        color: #333333;
+    }
+    &-cash{
+        font-size: 15px;
+        font-weight: 400;
+        color: #0674ec;
+    }
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    display: flex;
+    align-items: center; 
+}
+.menu__list{
+    li{
+        display: inline-block;
+        & + li{
+            margin-left: 30px;
+        }
+    }
+    a{
+        font-family: "Quicksand-Medium";
+        color: #333333;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+.menu__form{
+    max-width: 360px;
+    position: relative;
+    margin-left: auto;
+    input{
+        display: block;
+        width: 100%;
+        border-radius: 50px;
+        height: 46px;
+        font-size: 15px;
+        font-weight: 400;
+        padding-left: 26px;
+        padding-right: 158px;
+        border: 1px solid #898f96;
+        outline:none;
+        &::placeholder{
+            color:#898f96;
+        }
+    }
+}
+button{
+    position: absolute;
+    width: 68px;
+    border: none;
+    border-radius:50px;
+    background-color: $blue;
+    right: 0px;
+    top: 0px;
+    height: 46px;
+}
+
+
