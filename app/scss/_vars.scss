@@ -1,2 +1,15 @@
 $bg: #eef1f3;
 $blue: #0674ec;
+
+@mixin f400 {
+    font-family: 'Quicksand-Regular';
+    font-weight: 400;
+}
+@mixin f500 {
+    font-family: 'Quicksand-Medium';
+    font-weight: 500;
+}
+@mixin f700 {
+    font-family: 'Quicksand-Bold';
+    font-weight: 700;
+}
