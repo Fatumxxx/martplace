@@ -28,7 +28,7 @@
     align-items: center;
     .header__btn {
         height: 36px;
-        padding: 4px 28px;
+        padding: 6px 28px;
         background-color: $blue;
         color: #fff;
         font-size: 14px;
@@ -47,6 +47,7 @@
         height: 50px;
         display: inline-block;
         margin-right: 20px;
+        cursor: pointer;
     }
 }
 .user__info {
@@ -114,6 +115,10 @@
         right: 0px;
         top: 0px;
         height: 46px;
+        cursor: pointer;
+        &:hover {
+            outline: none;
+        }
     }
 }
 
@@ -122,10 +127,10 @@
 // start product
 
 .product {
-    height: 725px;
+    max-height: 725px;
     background-color: #2b4dd0;
-    padding-top: 185px;
     &__inner {
+        padding-top: 185px;
         text-align: center;
         &-title {
             font-size: 60px;
@@ -175,8 +180,32 @@
     border-radius: 8px;
     padding: 40px;
     z-index: 5;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08), 0px -21px 2px -10px rgba(255, 255, 255, 0.5),
-        0px -41px 3px -20px rgba(255, 255, 255, 0.45);
+    position: relative;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    // box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08), 0px -21px 2px -10px rgba(255, 255, 255, 0.5),
+    // 0px -41px 3px -20px rgba(255, 255, 255, 0.45);
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: inherit;
+        width: 1110px;
+        height: 13px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px 8px 0 0;
+        top: -13px;
+        left: 16px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: inherit;
+        width: 1080px;
+        height: 26px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px 8px 0 0;
+        top: -26px;
+        left: 30px;
+    }
     &-form {
         form {
             position: relative;
@@ -238,6 +267,7 @@
 }
 // end product
 
+// start features
 .features {
     padding-top: 186px;
     padding-bottom: 121px;
@@ -252,6 +282,7 @@
     height: 403px;
     text-align: center;
     padding: 41px 16px;
+    transition: all 0.3s;
     &:hover {
         box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
     }
@@ -275,3 +306,4 @@
         line-height: 30px;
     }
 }
+// end features
