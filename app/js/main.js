@@ -15,4 +15,18 @@ $(function() {
         prevArrow: '<button class="slick-arrow slick-prew"></button>',
         nextArrow: '<button class="slick-arrow slick-next"></button>'
     });
+
+    $('.title__menu-image').on('click', function () {
+        $('.title__menu-list').slideToggle();
+    });
+
+    $('.followers__slider-inner').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: '<button class="slick-arrow slick-prew"></button>',
+        nextArrow: '<button class="slick-arrow slick-next"></button>'
+    });
+
+    var mixer = mixitup('.products__inner-box');
 });
